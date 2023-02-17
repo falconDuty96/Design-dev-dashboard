@@ -52,3 +52,7 @@ function previewIconCategorie(elem) {
 function createFiche() {
     $("#open-modal-fiche").click();
 }
+
+function createAbonnement() {
+    $("#open-modal-abonnement").click();
+}
