@@ -56,3 +56,10 @@ function createFiche() {
 function createAbonnement() {
     $("#open-modal-abonnement").click();
 }
+function createEmails() {
+    $("#open-modal-emails").click();
+}
+
+function createNotifications() {
+    $("#open-modal-notifications").click();
+}
