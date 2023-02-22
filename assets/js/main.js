@@ -63,3 +63,8 @@ function createEmails() {
 function createNotifications() {
     $("#open-modal-notifications").click();
 }
+
+
+function changeCateg() {
+    
+}
