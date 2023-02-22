@@ -68,7 +68,7 @@
                             <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
                             <span class="ms-2">Nouvel abonnement</span>
                         </a>
-                        <a href="transactions.html" class="sidebar-link">
+                        <a href="transactions.html" class="sidebar-link active">
                             <span class="icon"><i class="fa-solid fa-receipt"></i></span>
                             <span class="ms-2">Transactions</span>
                         </a>
@@ -81,7 +81,7 @@
                         <span class="line"></span>
                     </span>
                     <div class="pt-2">
-                        <a href="mails.html" class="sidebar-link active">
+                        <a href="mails.html" class="sidebar-link">
                             <span class="icon"><i class="fa-solid fa-scale-balanced"></i></span>
                             <span class="ms-2">Mails</span>
                         </a>
@@ -119,16 +119,16 @@
 
             </div>
             <main class="content">
-                <h1 class="h3">Liste d'email</h1>
+                <h1 class="h3">Nouvelle transaction</h1>
 <div class="form-container shadow shadow-sm">
     <h6 class="form-title d-flex justify-content-between">
-        <span>Liste d'emails</span>
+        <span>Transactions enregistrées</span>
         <span>
-            <!-- <button class="_btn _btn-primary" onclick="createEmails()">
+            <!-- <button class="_btn _btn-primary" onclick="createTransactions()">
                 <i class="fa-solid fa-plus"></i>
                 <span>Ajouter</span>
             </button> -->
-			<button type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#modal-emails" id="open-modal-emails"></button>
+			<button type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#modal-transactions" id="open-modal-transactions"></button>
         </span>
     </h6>
     <div class="form-table">
@@ -137,25 +137,30 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Envoyeur</th>
-                        <th>Objet</th>
+                        <th>Etablissement</th>
+                        <th>Montant</th>
                         <th>Date</th>
-                        <th>Etat</th>
-                        <th>Action</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>ketaka@gmail.com</td>
-                        <td class="text-limiter" style="max-width: 150px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quidem voluptate asperiores nihil pariatur dolore ratione soluta esse doloribus, veritatis at expedita eveniet inventore numquam reprehenderit neque suscipit ex placeat?</td>
-                        
-                        <td>21/02/2023</td>
-                        <td>Non lu</td>
-                        <td>
-                            <span role="button" onclick="createEmails()" class="btn-tooltip text-success" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Voir">
-                                <i class="fa-regular fa-eye"></i>
-                            </span>
-                        </td>   
+                        <td>Mamaliza</td>
+                        <td>65000 MGA</td>
+                        <td>22/02/2023</td>
+                        <td><p class="pending w-50 text-center bolder">En cours</p></td>
+                    </tr>
+                    <tr>
+                        <td>Mamaliza</td>
+                        <td>65000 MGA</td>
+                        <td>22/02/2023</td>
+                        <td><p class="success w-50 text-center bolder">Effectué</p></td>
+                    </tr>
+                    <tr>
+                        <td>Mamaliza</td>
+                        <td>65000 MGA</td>
+                        <td>22/02/2023</td>
+                        <td><p class="rejected w-50 text-center bolder">Rejeté</p></td>
                     </tr>
                 </tbody>
             </table>
@@ -165,30 +170,40 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="modal-emails" tabindex="-1" aria-labelledby="modal-emails" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="modal-transactions" tabindex="-1" aria-labelledby="modal-transactions" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog" id="form-header">
     
 <form class="modal-content">
         
     <div class="modal-header">
-        <h1 class="modal-title fs-5">Contenu</h1>
-        <button type="button" id="close-modal-emails" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5">Créer Abonnement</h1>
+        <button type="button" id="close-modal-abonnement" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
         
-        <div class="header-content">
-            <p class="bolder">Envoyeur: </p>
-            <p>ketaka@gmail.com</p>
+        <div class="form-group">
+            <label for="header-gt">Nombre d'année :</label>
+            <input type="number" class="form-control">
         </div>
-        <div class="body-content">
-            <p class="bolder">Objet:</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, nobis id. Tempore, vitae sint veritatis cupiditate atque similique voluptates at repellat nulla, id facere aliquid maiores doloribus! Dolore, consectetur praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores soluta aut, perspiciatis tenetur quae culpa et dignissimos quidem fuga corporis, quia ea repellat beatae impedit rerum hic fugiat earum eveniet.</p>
+        <div class="form-group">
+            <label for="header-gt">Etablissement :</label>
+            <select class="form-control">
+                <option value="">Mamaliza</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="header-gt">Total</label>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+            <label for="header-gt">Nombre d'année :</label>
+            <input type="date" class="form-control">
         </div>
         
 
     </div>
     <div class="modal-footer">
-        <button type="submit" class="_btn _btn-success w-50">Fermer</button>
+        <button type="submit" class="_btn _btn-success w-100">Créer</button>
     </div>
 </form>
 

@@ -1,0 +1,31 @@
+.bolder {
+    font-weight: bold ;
+    color: black;
+}
+.text-limiter {
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+    line-height: 1.2em;
+  }
+
+  .pending {
+    background-color: #ffc107;
+    color: white ;
+    padding: 3px ;
+    border-radius: 5px;
+  }
+
+  .success {
+    background-color: #198754;
+    color: white ;
+    padding: 3px ;
+    border-radius: 5px;
+  }
+
+  .rejected {
+    background-color: #dc3545;
+    color: white ;
+    padding: 3px ;
+    border-radius: 5px;
+  }

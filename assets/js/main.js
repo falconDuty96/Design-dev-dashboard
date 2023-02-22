@@ -1,18 +1,18 @@
 $(document).ready(function () {
-    $('.sidebar-link').each(function(){
-        $(this).on("click", (e) => {
-            e.preventDefault();
-            $.get($(this).attr("href"),
-                (data, textStatus, jqXHR) =>  {
-                    $(".content").html(data);
-                    $('.sidebar-link').removeClass('active')
+    // $('.sidebar-link').each(function(){
+    //     $(this).on("click", (e) => {
+    //         e.preventDefault();
+    //         $.get($(this).attr("href"),
+    //             (data, textStatus, jqXHR) =>  {
+    //                 $(".content").html(data);
+    //                 $('.sidebar-link').removeClass('active')
 
-                    $(this).addClass('active')
-                },
-            );
-        })
+    //                 $(this).addClass('active')
+    //             },
+    //         );
+    //     })
         
-    })
+    // })
 });
 
 function togglePassword(elem){
