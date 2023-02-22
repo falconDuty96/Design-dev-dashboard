@@ -38,7 +38,7 @@ body.dark {
   color: var(--color);
 }
 .dark .profil-menu {
-  background-color: rgba(255, 255, 255, 0.75);
+  /* background-color: rgba(255, 255, 255, 0.75); */
   border: 1px solid var(--color);
 }
 .dark .sidebar-title {
@@ -200,7 +200,10 @@ th {
   width: 30px;
   height: 30px;
   font-size: 1.3em;
-  background-color: rgba(0, 0, 0, 0.075);
+  /* background-color: rgba(0, 0, 0, 0.075); */
+  background-repeat: no-repeat ;
+  background-size: cover ;
+  background-position: center;
   border-radius: 50%;
   border: 1px solid #636e72;
 }

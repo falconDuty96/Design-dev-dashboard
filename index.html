@@ -30,9 +30,16 @@
                                 <span class="_badge" id="unread-message-count"></span>
                             
                         </span>
-                        <span class="profil-menu ms-3">
-                            <i class="fa-solid fa-user"></i>
+                        <span class="profil-menu ms-3" style="background-image: url('assets/image/logo-pour-fond-blanc.png');">
+                            
                         </span>
+                        <span class="ms-1 dropdown-toggle dropdown-custom" data-bs-toggle="dropdown"> Mamilaza</span>
+                        <ul class="dropdown-menu">
+                            <li class="text-muted"><h5 class="dropdown-header text-center bolder">Igo Guide</h5></li> 
+                            <li class="text-muted"><a class="dropdown-item" href="profil.html"> <i class="fa-solid fa-user"></i> Profil</a></li>
+                            <li class="text-muted"><a class="dropdown-item" href="#"> <i class="fa-solid fa-circle-question"></i> Aide</a></li>
+                            <li class="text-muted"><a class="dropdown-item" href="#"> <i class="fa-solid fa-cog"></i> Déconnexion</a></li>
+                          </ul>
                     </div>
                 </div>
             </div>
@@ -263,7 +270,7 @@
                 <span class="line"></span>
             </span>
             <div class="form-group">
-                <label>Site web :</label>
+                <label>Image de l'établissement :</label>
                 <input type="file" class="form-control">
             </div>
             <span class="sidebar-title my-3">
@@ -271,7 +278,7 @@
                 <span class="line"></span>
             </span>
             <div class="form-group">
-                <select class="form-select" id="selector-categ" onchange="changeCateg()">
+                <select class="form-select" id="selector-categ">
                     <option value="categ-1">Hébergements</option>
                     <option value="categ-2">Où boire</option>
                     <option value="categ-3">Où manger</option>
@@ -301,79 +308,60 @@
             </div>
             <div class="form-group d-none sc-selector" id="categ-2">
                 <select class="form-select">
-                    <option value="">Cabanes sur terre</option>
-                    <option value="">Cabanes sous terre</option>
-                    <option value="">Cabanes sur l'eau</option>
-                    <option value="">Cabanes sur Tippis/Tentes/Yourts</option>
-                    <option value="">Habitats roulants</option>
-                    <option value="">Cabanes sur les arbres</option>
-                    <option value="">Bulles</option>
-                    <option value="">Monuments historiques</option>
-                    <option value="">Bâteaux</option>
-                    <option value="">Hébergements de charme</option>
-                    <option value="">Hôtels atypiques</option>
+                    <option value="">Bars à lounge/Whisky/Cocktails</option>
+                    <option value="">Concerts bars</option>
+                    <option value="">Bars à vin</option>
+                    <option value="">Pubs-Bars à tapas</option>
+                    <option value="">Bars à thèmes-jeux-billard</option>
+                    <option value="">Bars à rooftop</option>
+                    <option value="">Bars à chat</option>
                 </select>
             </div>
             <div class="form-group d-none sc-selector" id="categ-3">
                 <select class="form-select">
-                    <option value="">Cabanes sur terre</option>
-                    <option value="">Cabanes sous terre</option>
-                    <option value="">Cabanes sur l'eau</option>
-                    <option value="">Cabanes sur Tippis/Tentes/Yourts</option>
-                    <option value="">Habitats roulants</option>
-                    <option value="">Cabanes sur les arbres</option>
-                    <option value="">Bulles</option>
-                    <option value="">Monuments historiques</option>
-                    <option value="">Bâteaux</option>
-                    <option value="">Hébergements de charme</option>
-                    <option value="">Hôtels atypiques</option>
+                    <option value="">Restaurants originaux</option>
+                    <option value="">Restaurants avec animations</option>
+                    <option value="">Cuisines traditionnelle</option>
+                    <option value="">Cuisines du monde</option>
+                    <option value="">Types fast food/tapas</option>
+                    <option value="">Brasseries-Bistrot-Auberges</option>
                 </select>
             </div>
             <div class="form-group d-none sc-selector" id="categ-4">
                 <select class="form-select">
-                    <option value="">Cabanes sur terre</option>
-                    <option value="">Cabanes sous terre</option>
-                    <option value="">Cabanes sur l'eau</option>
-                    <option value="">Cabanes sur Tippis/Tentes/Yourts</option>
-                    <option value="">Habitats roulants</option>
-                    <option value="">Cabanes sur les arbres</option>
-                    <option value="">Bulles</option>
-                    <option value="">Monuments historiques</option>
-                    <option value="">Bâteaux</option>
-                    <option value="">Hébergements de charme</option>
-                    <option value="">Hôtels atypiques</option>
+                    <option value="">Randonnées nature</option>
+                    <option value="">Au fil de l'eau</option>
+                    <option value="">Sites historiques</option>
+                    <option value="">Perles sauvages</option>
+                    <option value="">Les jardins de imaginaire</option>
                 </select>
             </div>
             <div class="form-group d-none sc-selector" id="categ-5">
                 <select class="form-select">
-                    <option value="">Cabanes sur terre</option>
-                    <option value="">Cabanes sous terre</option>
-                    <option value="">Cabanes sur l'eau</option>
-                    <option value="">Cabanes sur Tippis/Tentes/Yourts</option>
-                    <option value="">Habitats roulants</option>
-                    <option value="">Cabanes sur les arbres</option>
-                    <option value="">Bulles</option>
-                    <option value="">Monuments historiques</option>
-                    <option value="">Bâteaux</option>
-                    <option value="">Hébergements de charme</option>
-                    <option value="">Hôtels atypiques</option>
+                    <option value="">Ateliers-Stages</option>
+                    <option value="">Activités physiques et sportives</option>
+                    <option value="">Activités ludiques</option>
+                    <option value="">Activités gustatives</option>
+                    <option value="">Activités éducatives</option>
+                    <option value="">Activités bien-être</option>
+                    <option value="">Shopping artisans et créateurs</option>
                 </select>
             </div>
             <div class="form-group d-none sc-selector" id="categ-6">
                 <select class="form-select">
-                    <option value="">Cabanes sur terre</option>
-                    <option value="">Cabanes sous terre</option>
-                    <option value="">Cabanes sur l'eau</option>
-                    <option value="">Cabanes sur Tippis/Tentes/Yourts</option>
-                    <option value="">Habitats roulants</option>
-                    <option value="">Cabanes sur les arbres</option>
-                    <option value="">Bulles</option>
-                    <option value="">Monuments historiques</option>
-                    <option value="">Bâteaux</option>
-                    <option value="">Hébergements de charme</option>
-                    <option value="">Hôtels atypiques</option>
+                    <option value="">Organisateurs</option>
+                    <option value="">Photographes et vidéo</option>
+                    <option value="">Traiteurs</option>
+                    <option value="">Fleuristes</option>
+                    <option value="">Locations de véhicules</option>
+                    <option value="">Locations de vélos</option>
+                    <option value="">Divers</option>
                 </select>
             </div>
+            <span class="sidebar-title my-3">
+                <span class="bolder">Divers</span>
+                <span class="line"></span>
+            </span>
 
         </div>
         <div class="modal-footer">

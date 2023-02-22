@@ -1,18 +1,19 @@
 $(document).ready(function () {
-    // $('.sidebar-link').each(function(){
-    //     $(this).on("click", (e) => {
-    //         e.preventDefault();
-    //         $.get($(this).attr("href"),
-    //             (data, textStatus, jqXHR) =>  {
-    //                 $(".content").html(data);
-    //                 $('.sidebar-link').removeClass('active')
+    $(".sc-selector").removeClass("d-none")
+    $(".sc-selector").addClass("d-none")
+    $("#categ-1").removeClass("d-none")
+    $("#selector-categ").val("categ-1")
 
-    //                 $(this).addClass('active')
-    //             },
-    //         );
-    //     })
-        
-    // })
+    $("#selector-categ").change(function() {
+        var value = $(this).val() ;
+        $(".sc-selector").removeClass("d-none")
+        $(".sc-selector").addClass("d-none")
+        $("#"+value).removeClass("d-none")
+    })
+
+    $("#hover-clicked").click(function() {
+        $("#clickable").click() ;
+    })
 });
 
 function togglePassword(elem){
@@ -64,7 +65,3 @@ function createNotifications() {
     $("#open-modal-notifications").click();
 }
 
-
-function changeCateg() {
-    
-}
